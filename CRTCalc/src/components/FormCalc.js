@@ -18,9 +18,9 @@ const FormCalc = () => {
         return parseInt(num);
       }
     function CleanDataForm(text) {
-        var spliting = text.replace(/\s/g, '');
-        var spliting = spliting.split(",");
-        var spliting = spliting.map(ChangeFormToInt)
+        let spliting = text.replace(/\s/g, '');
+        spliting = spliting.split(",");
+        spliting = spliting.map(ChangeFormToInt)
         return spliting
     }
 
@@ -56,8 +56,8 @@ const FormCalc = () => {
         var data2 = CleanDataForm(input2)
 
         // Check GCD of b
-        if (data2.length == data1.length) {
-            if (gcd_more_than_two_numbers(data2) == 1) {
+        if (data2.length === data1.length) {
+            if (gcd_more_than_two_numbers(data2) === 1) {
                 setData (x => findMinX(data2, data1, data1.length) )
                 setSucces (x => true)
             }
@@ -82,7 +82,7 @@ const FormCalc = () => {
         var x0 = 0
         var x1 = 1
     
-        if (m == 1) {
+        if (m === 1) {
             return 0
         }
     
