@@ -1,0 +1,117 @@
+
+.container {
+    font-family: Comic Sans MS;
+    width: 50%;
+    background-color: whitesmoke;
+    align-items: center;
+    margin: auto;
+    margin-top: 30px;
+    padding: 20px;
+    box-shadow: 0px 4px 8px 0 rgba(0, 0, 0, 0.5);
+    padding: 16px;
+    border-radius: 25px;
+    text-align: center;
+    height: fit-content;
+}
+
+.container .rumus {
+    text-align: center;
+}
+
+input[type=text], select {
+  width: 80%;
+  padding: 12px 15px;
+  margin: 10px 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-left: -15px;
+  box-sizing: border-box;
+  text-align: center;
+  font-family: Comic Sans MS;
+  font-size: 20px;
+}
+
+label {
+    font-size : 20px;
+}
+
+.hasil2 {
+  margin-bottom: 20px;
+}
+
+/* Style the submit button */
+input[type=submit] {
+  width: 80%;
+  background-color: #04AA6D;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+}
+
+.button{
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 15px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #f4511e;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 5px #999;
+}
+
+.button{background-color: #f4511e}
+
+.button:active{
+  background-color: #e73f0b;
+  box-shadow: 0 2px #666;
+  transform: translateY(4px);
+}
+
+.container .judul {
+    color : #FF2400;
+    text-shadow: 2px 2px #616161;
+    margin-bottom : 20px;
+}
+
+.container .rumus {
+    font-size : 150%;
+    color : #3D3D3D;
+    margin-bottom : 10px;
+}
+
+.container .hasil1 {
+    margin-top : 20px;
+}
+
+label {
+  margin-right: 15px;
+}
+
+.button1 {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 15px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #4CAF50;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 5px #999;
+}
+
+.button1:hover {background-color: #3e8e41}
+
+.button1:active {
+  background-color: #3e8e41;
+  box-shadow: 0 2px #666;
+  transform: translateY(4px);
+}
