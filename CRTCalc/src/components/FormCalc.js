@@ -145,6 +145,7 @@ const FormCalc = () => {
                 <input
                     type ="text"
                     value = {input1}
+                    placeholder = "a1, a2, a3"
                     required
                     onChange = {(e) => setInput1(e.target.value)}
                 />
@@ -154,6 +155,7 @@ const FormCalc = () => {
                 <input
                     type ="text"
                     value = {input2}
+                    placeholder = "b1, b2, b3"
                     required
                     onChange = {(e) => setInput2(e.target.value)}
                 />
