@@ -166,7 +166,7 @@ const FormCalc = () => {
             
                     {(show && succes)?
                     <div>
-                    <h1 className = "hasil1">X = {totalA} ( mod {totalB} )</h1>
+                    <h1 className = "hasil1">X &#8801; {totalA} ( mod {totalB} )</h1>
                     <h1 className = "hasil2">X = {data}</h1>
                     </div> : null}
                     
