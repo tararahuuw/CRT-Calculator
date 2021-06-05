@@ -27,8 +27,8 @@ https://black-ground-0aeec7e00.azurestaticapps.net/
 
 ## Code Examples
 Show examples of usage:
-1. Masukkan seluruh komponen a sesuai dengan persamaan umum CRT
-2. Masukkan seluruh komponen b sesuai dengan persamaan umum CRT
+1. Masukkan seluruh komponen a sesuai dengan persamaan umum CRT (Di pisahkan dengan tanda koma)
+2. Masukkan seluruh komponen b sesuai dengan persamaan umum CRT (Di pisahkan dengan tanda koma)
 3. Tekan tombol calculate
 
 ## Features
