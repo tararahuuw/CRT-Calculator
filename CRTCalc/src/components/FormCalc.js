@@ -8,6 +8,7 @@ const FormCalc = () => {
     const [data, setData] = useState('')
     const [show, setShow] = useState(false)
     const [succes, setSucces] = useState(false)
+    const [tampilkan, setTampilkan] = useState(false)
     const [totalA, setTotalA] = useState("")
     const [totalB, setTotalB] = useState("")
 
@@ -24,9 +25,9 @@ const FormCalc = () => {
     // Method for cleaning data form from comma and spacing
     function CleanDataForm(text) {
         let spliting = text.replace(/\s/g, '');
-        spliting = spliting.split(",");
-        spliting = spliting.map(ChangeFormToInt)
-        return spliting
+        let spliting2 = spliting.split(",");
+        let spliting3 = spliting2.map(ChangeFormToInt)
+        return spliting3
     }
 
     // Method for searching gcd with more than two number
@@ -96,30 +97,104 @@ const FormCalc = () => {
         for (var i = 0; i < k; i++)  {
             prod = prod * num[i]
         }
+        console.log("prod")
+
+        console.log(prod)
+        console.log(num)
+        console.log(rem)
+        console.log(k)
         setTotalB (x => prod)
         var result = 0
-    
         for (var j = 0; j < k; j++){
             var pp = Math.floor(prod / num[j])
+            console.log("ini pp")
             console.log(pp)
             result = result + rem[j] * inv(pp, num[j]) * pp
+            
+
         }
         setTotalA (x => result)
         
-        return result % prod
+        return (result % prod)
+    }
+    function penjelasan(num, rem, k) {
+        var prod = 1
+        for (var i = 0; i < k; i++)  {
+            prod = prod * num[i]
+        }
+        console.log("penjelasan")
+        console.log(num)
+        console.log(rem)
+        console.log(k)
+        var result = 0
+        var array =[]
+        var arrayY = []
+        for (var j = 0; j < k; j++){
+            var pp = Math.floor(prod / num[j])
+            console.log(pp)
+            array.push(pp)
+            result = result + rem[j] * inv(pp, num[j]) * pp
+            arrayY.push(inv(pp, num[j]))
+        }
+        console.log(array)
+        var sum = 1
+        for (var j = 0; j < num.length; j++){
+            sum = sum * num[j]
+        }
+        
+        return (
+            <div className = "penjelasan">
+                <p>1. Periksa apakah masing-masing komponen b saling relatif prima</p>
+                <p>‏‏‎ ‎</p>
+                <p>2. Untuk setiap nilai k, masing-masing komponen a ke dalam variabel ak</p>
+                <div>
+                    {
+                        (rem.map((currElement, index) => <p value={currElement} key={currElement}> ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎a{index+1} = {currElement}</p>))
+                    }
+                </div>
+                <p>‏‏‎ ‎</p>
+                <p>3. Tentukan perkalian masing-masing komponen b</p>
+                <p>‏‏‎ ‎‏‏‎ ‏‏‎ ‎‎‏‏‎ ‎m = b1 * b2 * b3 * ...</p>
+                <p>‏‏‎ ‎‏‏‎ ‏‏‎ ‎‎‏‏‎ ‎m = {sum}</p>
+                <p>‏‏‎ ‎</p>
+                <p>3. Untuk setiap nilai k, tentukan Mk dengan Mk = m/bk</p>
+                <div>
+                {
+                    (array.map((currElement, index) => <p value={currElement} key={currElement}>‏‏‎ ‎‏‏‎‏‏‎ ‎ ‎‏‏‎ ‎M{index+1} = {sum}/{num[index]}={currElement}</p>))
+                }
+                </div>
+                <p>‏‏‎ ‎</p>
+                <p>4.Untuk setiap nilai k temukan yi yang di dapat dari Mi ≡ 1 ( mod mk)</p>
+                <div>
+                    {
+                        (array.map((currElement, index) => <p value={currElement} key={currElement}>‏‏‎ ‎‏‏‎ ‎‏‏‎ ‏‏‎ ‎‎y{index+1} = {arrayY[index]} karena {currElement}.{arrayY[index]} &#8801; 1 ( mod {rem[index]} )</p>))
+                    }
+                </div>
+                <p>‏‏‎ ‎</p>
+                <p>5. Tentukan solusi unik x dengan x ≡  a1 ⋅ M1 ⋅ y1 +...+ ak ⋅ Mk ⋅ yk ( mod m) </p>
+                <p>‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ X &#8801; {totalA} ( mod {totalB} ) </p>
+                <p>‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎X = {(data)}</p>
+            </div>
+        )
     }
     // End of method CRT algorithm
 
     // Method for displaying result of CRT
     function display () {
+        setTampilkan(e => false)
         var data1 = CleanDataForm(input1)
         var data2 = CleanDataForm(input2)
+        console.log(data1)
+        console.log(data2)
+        
 
         // Check GCD of b
         if (data2.length === data1.length) {
             if (gcd_more_than_two_numbers(data2) === 1) {
                 setData (x => findMinX(data2, data1, data1.length) )
                 setSucces (x => true)
+                
+                
             }
             else {
                 alert("Komponen-komponen b harus saling relatif prima")
@@ -132,6 +207,9 @@ const FormCalc = () => {
         }
         
         setShow (x => true)
+    }
+    function display2 () {
+        setTampilkan(e => true)
     }
 
     //Returning the html tag
@@ -170,6 +248,13 @@ const FormCalc = () => {
                     <div>
                     <h1 className = "hasil1">X &#8801; {totalA} ( mod {totalB} )</h1>
                     <h1 className = "hasil2">X = {data}</h1>
+                    <button className = "button2" type = "submit" onClick = {display2}>Penjelasan</button>
+                    
+                    </div> : null}
+
+                    {tampilkan ?
+                    <div>
+                        {penjelasan(CleanDataForm(input2), CleanDataForm(input1), CleanDataForm(input1).length)}
                     </div> : null}
                     
             </div>

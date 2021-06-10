@@ -6,8 +6,11 @@ function App() {
     <div className="App">
       <div class="animation-area">
 		    <ul class="box-area">
+				<p>‏‏‎ ‎</p>
+				<p>‏‏‎ ‎</p>
+				<p>‏‏‎ ‎</p>
+				<p>‏‏‎ ‎</p>
                 <FormCalc />
-			    <li></li>
 			    <li></li>
 			    <li></li>
 			    <li></li>

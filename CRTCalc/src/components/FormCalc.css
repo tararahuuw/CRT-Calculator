@@ -11,6 +11,7 @@
     border-radius: 25px;
     text-align: center;
     height: fit-content;
+    padding-top: 40px;
 }
 
 .container .rumus {
@@ -113,4 +114,32 @@ label {
   background-color: #3e8e41;
   box-shadow: 0 2px #666;
   transform: translateY(4px);
+}
+
+.button2 {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 15px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  margin-bottom: 20px;
+  outline: none;
+  color: #fff;
+  background-color: #ddbb22;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 5px #999;
+}
+
+.button2:hover {background-color: #c89300}
+
+.button2:active {
+  background-color: #f8a100;
+  box-shadow: 0 2px #666;
+  transform: translateY(4px);
+}
+
+.penjelasan {
+  text-align: left;
 }
