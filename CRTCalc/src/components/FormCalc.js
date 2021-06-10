@@ -138,8 +138,8 @@ const FormCalc = () => {
         }
         console.log(array)
         var sum = 1
-        for (var k = 0; k < num.length; k++){
-            sum = sum * num[k]
+        for (var z = 0; z < num.length; z++){
+            sum = sum * num[z]
         }
         
         return (
