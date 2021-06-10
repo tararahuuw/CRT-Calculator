@@ -138,8 +138,8 @@ const FormCalc = () => {
         }
         console.log(array)
         var sum = 1
-        for (var j = 0; j < num.length; j++){
-            sum = sum * num[j]
+        for (var k = 0; k < num.length; k++){
+            sum = sum * num[k]
         }
         
         return (
@@ -167,7 +167,7 @@ const FormCalc = () => {
                 <p>4.Untuk setiap nilai k temukan yi yang di dapat dari Mi ≡ 1 ( mod mk)</p>
                 <div>
                     {
-                        (array.map((currElement, index) => <p value={currElement} key={currElement}>‏‏‎ ‎‏‏‎ ‎‏‏‎ ‏‏‎ ‎‎y{index+1} = {arrayY[index]} karena {currElement}.{arrayY[index]} &#8801; 1 ( mod {rem[index]} )</p>))
+                        (array.map((currElement, index) => <p value={currElement} key={currElement}>‏‏‎ ‎‏‏‎ ‎‏‏‎ ‏‏‎ ‎‎y{index+1} = {arrayY[index]} karena {currElement}.{arrayY[index]} &#8801; 1 ( mod {num[index]} )</p>))
                     }
                 </div>
                 <p>‏‏‎ ‎</p>
